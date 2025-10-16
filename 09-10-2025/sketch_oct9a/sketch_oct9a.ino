@@ -7,8 +7,12 @@ void setup()
 
 void loop()
 {
-	digitalWrite(ledPin,HIGH);
-  	delay(1000);
-  	digitalWrite(ledPin,LOW);
-    delay(1000);
+  for (int t = 1000; t > 100; t= t-50){
+     digitalWrite(ledPin,HIGH);
+  	 delay(t);
+  	 digitalWrite(ledPin,LOW);
+     delay(t);
+  }
+  // Robimy dodatkową przerwę
+  delay(4000);
 }
