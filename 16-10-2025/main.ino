@@ -7,12 +7,11 @@ void setup()
 
 void loop()
 {
-  // Migamy naszą diodą 3 razy
-  for (int i=0; i<3; i++){
+  for (int t = 1000; t > 100; t= t-50){
      digitalWrite(ledPin,HIGH);
-  	 delay(500);
+  	 delay(t);
   	 digitalWrite(ledPin,LOW);
-     delay(500);
+     delay(t);
   }
   // Robimy dodatkową przerwę
   delay(4000);
