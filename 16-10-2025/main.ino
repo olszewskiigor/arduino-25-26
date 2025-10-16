@@ -9,10 +9,9 @@ void loop()
 {
   // Migamy naszą diodą 3 razy
   for (int i=0; i<3; i++){
-    
+     digitalWrite(ledPin,HIGH);
+  	 delay(500);
+  	 digitalWrite(ledPin,LOW);
+     delay(500);
   }
-  // digitalWrite(ledPin,HIGH);
-  // delay(500);
-  // digitalWrite(ledPin,LOW);
-  // delay(500);
 }
