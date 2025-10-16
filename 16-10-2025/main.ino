@@ -14,4 +14,6 @@ void loop()
   	 digitalWrite(ledPin,LOW);
      delay(500);
   }
+  // Robimy dodatkową przerwę
+  delay(4000);
 }
