@@ -1,3 +1,6 @@
+#define TRIG 9
+#define ECHO 10
+
 int ledPin = 13;
 
 void setup()
