@@ -10,6 +10,9 @@ void setup()
 	pinMode(ledPin,OUTPUT);
   	pinMode(TRIG,OUTPUT);
     pinMode(ECHO,INPUT);
+  
+  	// Uruchomienie komunikacji szeregowej
+  	Serial.begin(9600)
 }
 
 void loop()
