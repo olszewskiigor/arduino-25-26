@@ -1,11 +1,15 @@
-#define TRIG 9
-#define ECHO 10
+#define TRIG 9 // Pin wyzwalający Trigger
+#define ECHO 10 // Pin odbiorczy Echo
 
 int ledPin = 13;
+int dystans;
+long czas;
 
 void setup()
 {
 	pinMode(ledPin,OUTPUT);
+  	pinMode(TRIG,OUTPUT);
+    pinMode(ECHO,INPUT);
 }
 
 void loop()
