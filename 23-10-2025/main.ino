@@ -26,4 +26,14 @@ void loop()
   
     // Mierzymy, jak długo pin ECHO pozostaje w stanie wysokim
     czas = pulseIn(ECHO,HIGH);
+  
+    // Przeliczamy czas na odległość w cm
+    dystans = czas/58;
+  
+  	Serial.print("Dystans: "); // Wypisujemy teskt "Dystans: "
+  	Serial.print(dystans); // Wypisujemy wartość zmiennej dystans
+  	Serial.println(" cm"); // Wypisujemy jednostkę i robimy nową linię
+  
+  	delay(500); // Czekamy 0,5s przed kolejnym pomiarem
+  	
 }
