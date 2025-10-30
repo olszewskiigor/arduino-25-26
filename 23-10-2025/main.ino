@@ -12,17 +12,14 @@ void setup()
     pinMode(ECHO,INPUT);
   
   	// Uruchomienie komunikacji szeregowej
-  	Serial.begin(9600)
+  	Serial.begin(9600);
 }
 
 void loop()
 {
-  for (int t = 1000; t > 100; t= t-50){
-     digitalWrite(ledPin,HIGH);
-  	 delay(t);
-  	 digitalWrite(ledPin,LOW);
-     delay(t);
-  }
-  // Robimy dodatkową przerwę
-  delay(4000);
+	// Czyszczenie sygnału
+  	digitalWrite(TRIG,LOW); // Ustawiamy TRIG w stan niski
+  	delayMicroseconds(2); // Czekamy 2 mikrosekundy
+    // Wysyłamy krótki impuls wyzwalający
+  	digitalWrite(TRIG,HIGH); // Ustawiamy TRIG w stan wysoki
 }
