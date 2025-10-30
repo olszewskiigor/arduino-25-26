@@ -22,4 +22,8 @@ void loop()
   	delayMicroseconds(2); // Czekamy 2 mikrosekundy
     // Wysyłamy krótki impuls wyzwalający
   	digitalWrite(TRIG,HIGH); // Ustawiamy TRIG w stan wysoki
+    delayMicroseconds(10); // Czekamy 10 mikrosekund
+  
+    // Mierzymy, jak długo pin ECHO pozostaje w stanie wysokim
+    czas = pulseIn(ECHO,HIGH);
 }
