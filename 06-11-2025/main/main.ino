@@ -23,4 +23,6 @@ void loop() {
     return; // Jesli nie, wracamy do początku naszej pętli
   }
 
+  Serial.print("Wykryto kartę! ID: ")
+
 }
