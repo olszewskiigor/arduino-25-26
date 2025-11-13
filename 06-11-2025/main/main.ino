@@ -14,7 +14,7 @@ void setup() {
   SPI.begin(); // Uruchamiamy komunikację SPI
   rfid.PCD_Init(); // Tworzymy moduł RFID
 
-  Serial.println("Przyłóż kartę RFID do czytnika....")
+  Serial.println("Przyłóż kartę RFID do czytnika....");
 }
 
 void loop() {
@@ -23,6 +23,6 @@ void loop() {
     return; // Jesli nie, wracamy do początku naszej pętli
   }
 
-  Serial.print("Wykryto kartę! ID: ")
+  Serial.print("Wykryto kartę! ID: ");
 
 }
