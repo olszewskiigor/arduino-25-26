@@ -8,6 +8,7 @@
 
 void setup() {
   Serial.begin(9600); // Uruchamiamy komunikację z komputerem (monitor portu szeregowego)
+  SPI.begin(); // Uruchamiamy komunikację SPI
 }
 
 void loop() {
