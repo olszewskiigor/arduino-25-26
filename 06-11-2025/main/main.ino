@@ -6,9 +6,13 @@
 #define SS_PIN 10 // Pin podłączony z pinem D10 Arduino
 #define RST_PIN 5 // Pin RST podłączony z pinem D5 Arduino
 
+// Tworzymy obiekt do obsługi czytnik RFID
+MFRC522 rfid(SS_PIN, RST_PIN);
+
 void setup() {
   Serial.begin(9600); // Uruchamiamy komunikację z komputerem (monitor portu szeregowego)
   SPI.begin(); // Uruchamiamy komunikację SPI
+  rfid.PCD_Init(); // Tworzymy moduł RFID
 }
 
 void loop() {
