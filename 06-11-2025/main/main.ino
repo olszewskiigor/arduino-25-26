@@ -13,9 +13,14 @@ void setup() {
   Serial.begin(9600); // Uruchamiamy komunikację z komputerem (monitor portu szeregowego)
   SPI.begin(); // Uruchamiamy komunikację SPI
   rfid.PCD_Init(); // Tworzymy moduł RFID
+
+  Serial.println("Przyłóż kartę RFID do czytnika....")
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  // Sprawdzamy, czy przyłożono kartę do czujnika
+  if (!rfid.PICC_IsNewCardPresent() || !rfid.PICC_ReadCardSerial()){
+    return; // Jesli nie, wracamy do początku naszej pętli
+  }
 
 }
