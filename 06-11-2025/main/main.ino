@@ -25,4 +25,12 @@ void loop() {
 
   Serial.print("Wykryto kartę! ID: ");
 
+  // Wyświetlamy ID karty w formacie HEX
+  for (byte i = 0; i < rfid.uid.size; i++) {
+    Serial.print(rfid.uid.uidByte[i] < 0x10 ? "0" : "");
+    Serial.print(rfid.uid.uidByte[i], HEX);
+    Serial.print(" ");
+  }
+  Serial.println();
+
 }
