@@ -12,6 +12,8 @@
 // Tworzymy obiekt do obsługi czytnik RFID
 MFRC522 rfid(SS_PIN, RST_PIN);
 
+byte allowedUID[4] = {0xDE, 0x12, 0x8A, 0x04}; // FRANEK
+
 void setup() {
   Serial.begin(9600); // Uruchamiamy komunikację z komputerem (monitor portu szeregowego)
   SPI.begin(); // Uruchamiamy komunikację SPI
