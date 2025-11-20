@@ -18,6 +18,12 @@ void setup() {
   rfid.PCD_Init(); // Tworzymy moduł RFID
 
   Serial.println("Przyłóż kartę RFID do czytnika....");
+
+  pinMode(GREEN_LED, OUTPUT);
+  pinMode(RED_LED, OUTPUT);
+
+  digitalWrite(GREEN_LED, LOW);
+  digitalWrite(RED_LED, LOW);
 }
 
 void loop() {
