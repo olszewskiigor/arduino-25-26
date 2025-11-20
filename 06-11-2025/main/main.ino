@@ -6,6 +6,9 @@
 #define SS_PIN 10 // Pin podłączony z pinem D10 Arduino
 #define RST_PIN 5 // Pin RST podłączony z pinem D5 Arduino
 
+#define GREEN_LED 7
+#define RED_LED 6
+
 // Tworzymy obiekt do obsługi czytnik RFID
 MFRC522 rfid(SS_PIN, RST_PIN);
 
