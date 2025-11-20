@@ -33,4 +33,6 @@ void loop() {
   }
   Serial.println();
 
+  // Zatrzymanie komunikacji z kartą
+  rfid.PICC_HaltA();
 }
